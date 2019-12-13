@@ -11,9 +11,6 @@ jobs:
   timeoutInMinutes: 90
   pool:
     vmImage: ubuntu-18.04
-  strategy:
-    matrix:
-      Debug:
   steps:
   - script: |
       sudo apt-get remove docker docker-engine docker.io containerd runc
