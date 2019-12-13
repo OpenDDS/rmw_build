@@ -15,5 +15,5 @@ jobs:
   steps:
   - script: |
       printenv
-      sudo hello
+      echo hello
       pwd
