@@ -1,9 +1,9 @@
 repositories:
-  ros2/rmw_opendds:
+  rmw_opendds:
     type: git
     url: https://github.com/adamsj-oci/rmw_opendds.git
     version: eloquent
-  ros2/rosidl_typesupport_opendds:
+  rosidl_typesupport_opendds:
     type: git
     url: https://github.com/adamsj-oci/rosidl_typesupport_opendds.git
     version: master
