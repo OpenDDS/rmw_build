@@ -15,3 +15,8 @@ repositories:
     type: git
     url: https://github.com/ros2/example_interfaces
     version: eloquent
+  launch:
+    type: git
+    url: https://github.com/ros2/launch.git
+    version: eloquent
+    
