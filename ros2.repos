@@ -1,11 +1,11 @@
 repositories:
   rmw_opendds:
     type: git
-    url: https://github.com/adamsj-oci/rmw_opendds.git
+    url: https://github.com/oci-labs/rmw_opendds.git
     version: master
   rosidl_typesupport_opendds:
     type: git
-    url: https://github.com/adamsj-oci/rosidl_typesupport_opendds.git
+    url: https://github.com/oci-labs/rosidl_typesupport_opendds.git
     version: master
   demos:
     type: git
