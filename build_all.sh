@@ -5,4 +5,5 @@ pushd $script_path
 . /opt/ros/eloquent/setup.bash
 ./build_rmw.sh 
 ./build_examples.sh 
+./build_cyclone.sh
 popd
