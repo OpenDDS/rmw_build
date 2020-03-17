@@ -2,8 +2,9 @@
 alt_rmw="rmw_opendds_cpp"
 run_test="examples_rclcpp_minimal_publisher publisher_member_function"
 gdb_cmd="gdb -ex run --args"
+instrumented=""
 
-while getopts ":ha:sb" opt; do
+while getopts ":ha:sbi" opt; do
 case ${opt} in
     a ) 
         alt_rmw=$OPTARG
@@ -15,7 +16,10 @@ case ${opt} in
     b )
         gdb_cmd="gdb --args"
     ;;
-    h ) echo "options: [-s] switch to subscriber [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp). [-b] breakpoint debugging"
+    i )
+        instrumented="_instrumented"
+    ;;
+    h ) echo "options: [-s] switch to subscriber [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp). [-b] breakpoint debugging [-i] run instrumented code"
     exit
     ;;
 esac
@@ -33,7 +37,8 @@ pushd $script_path &> /dev/null
 pushd .. &> /dev/null
 . /opt/ros/eloquent/setup.bash
 . install/local_setup.bash
-eval RMW_IMPLEMENTATION="$alt_rmw ros2 run --prefix '${gdb_cmd}' $run_test"
+
+eval RMW_IMPLEMENTATION="$alt_rmw ros2 run --prefix '${gdb_cmd}' $run_test$instrumented"
 popd &> /dev/null
 popd &> /dev/null
  
