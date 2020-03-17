@@ -6,4 +6,5 @@ pushd $script_path
 ./build_rmw.sh 
 ./build_examples.sh 
 ./build_cyclone.sh
+./build_oci_test_msgs.sh
 popd
