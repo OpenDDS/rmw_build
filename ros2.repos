@@ -15,3 +15,7 @@ repositories:
     type: git
     url: https://github.com/ClaytonCalabrese/rmw_cyclonedds.git
     version: eloquent
+  oci_test_msgs:
+    type: git
+    url: https://github.com/ClaytonCalabrese/oci_test_msgs.git
+    version: master
