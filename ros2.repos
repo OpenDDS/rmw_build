@@ -10,7 +10,7 @@ repositories:
   examples:
     type: git
     url: https://github.com/ClaytonCalabrese/examples.git
-    version: eloquent
+    version: master
   rmw_cyclonedds:
     type: git
     url: https://github.com/ClaytonCalabrese/rmw_cyclonedds.git
