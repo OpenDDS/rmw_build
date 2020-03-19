@@ -27,8 +27,14 @@ fi
 pushd $script_path &> /dev/null
 pushd .. &> /dev/null
 
-read -r -s -p $'NOTICE: removing build to create clean build. Press enter to continue...\n'
-rm -rf build
+while true; do
+    read -p "Remove build directory to prevent build contanimation?" yn
+    case $yn in
+        [Yy]* ) rm -rf build; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 . /opt/ros/eloquent/setup.bash
 echo $use
