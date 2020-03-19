@@ -2,7 +2,7 @@
 script=`realpath $0`
 script_path=`dirname $script`
 
-alt_install_base="--symlink-install"
+alt_install_base=""
 while getopts ":i:" opt; do
 case ${opt} in 
     i )
