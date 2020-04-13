@@ -1,0 +1,54 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:srv/DescribeParameters.idl
+// generated code does not contain a copyright notice
+#include "rcl_interfaces/msg/dds_opendds/ParameterDescriptor_.idl"
+
+#ifndef __rcl_interfaces__srv__describe_parameters__idl__
+#define __rcl_interfaces__srv__describe_parameters__idl__
+
+
+module rcl_interfaces {
+
+module srv {
+
+module dds_ {
+
+typedef sequence<string> StringSeq_1;
+
+struct DescribeParameters_Request_ {
+StringSeq_1 names_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module rcl_interfaces
+
+
+module rcl_interfaces {
+
+module srv {
+
+module dds_ {
+
+typedef sequence<rcl_interfaces::msg::dds_::ParameterDescriptor_> ParameterDescriptorSeq_1;
+
+struct DescribeParameters_Response_ {
+ParameterDescriptorSeq_1 descriptors_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__srv__describe_parameters__idl__

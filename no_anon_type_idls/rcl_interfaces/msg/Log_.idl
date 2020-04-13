@@ -1,0 +1,44 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/Log.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_opendds/Time_.idl"
+
+#ifndef __rcl_interfaces__msg__log__idl__
+#define __rcl_interfaces__msg__log__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+module Log_Constants {
+const octet DEBUG_ = 10;
+const octet INFO_ = 20;
+const octet WARN_ = 30;
+const octet ERROR_ = 40;
+const octet FATAL_ = 50;
+
+};
+
+struct Log_ {
+builtin_interfaces::msg::dds_::Time_ stamp_;
+octet level_;
+string name_;
+string msg_;
+string file_;
+string function_;
+unsigned long line_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__log__idl__

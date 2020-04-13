@@ -1,0 +1,41 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/ParameterDescriptor.idl
+// generated code does not contain a copyright notice
+#include "rcl_interfaces/msg/dds_opendds/FloatingPointRange_.idl"
+#include "rcl_interfaces/msg/dds_opendds/IntegerRange_.idl"
+
+#ifndef __rcl_interfaces__msg__parameter_descriptor__idl__
+#define __rcl_interfaces__msg__parameter_descriptor__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+typedef sequence<rcl_interfaces::msg::dds_::FloatingPointRange_, 1> FloatingPointRangeSeq;
+typedef sequence<rcl_interfaces::msg::dds_::IntegerRange_, 1> IntegerRangeSeq;
+
+struct ParameterDescriptor_ {
+string name_;
+octet type_;
+string description_;
+string additional_constraints_;
+boolean read_only_;
+FloatingPointRangeSeq floating_point_range_;
+
+IntegerRangeSeq integer_range_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__parameter_descriptor__idl__

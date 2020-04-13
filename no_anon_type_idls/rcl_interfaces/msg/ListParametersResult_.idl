@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/ListParametersResult.idl
+// generated code does not contain a copyright notice
+
+#ifndef __rcl_interfaces__msg__list_parameters_result__idl__
+#define __rcl_interfaces__msg__list_parameters_result__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+typedef sequence<string> StringSeq_7;
+
+struct ListParametersResult_ {
+StringSeq_7 names_;
+
+StringSeq_7 prefixes_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__list_parameters_result__idl__

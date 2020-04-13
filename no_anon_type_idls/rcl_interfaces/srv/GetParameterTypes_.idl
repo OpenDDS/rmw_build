@@ -1,0 +1,53 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:srv/GetParameterTypes.idl
+// generated code does not contain a copyright notice
+
+#ifndef __rcl_interfaces__srv__get_parameter_types__idl__
+#define __rcl_interfaces__srv__get_parameter_types__idl__
+
+
+module rcl_interfaces {
+
+module srv {
+
+module dds_ {
+
+typedef sequence<string> StringSeq_4;
+
+struct GetParameterTypes_Request_ {
+StringSeq_4 names_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module rcl_interfaces
+
+
+module rcl_interfaces {
+
+module srv {
+
+module dds_ {
+
+typedef sequence<octet> OctetSeq_2;
+
+struct GetParameterTypes_Response_ {
+OctetSeq_2 types_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__srv__get_parameter_types__idl__

@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/SetParametersResult.idl
+// generated code does not contain a copyright notice
+
+#ifndef __rcl_interfaces__msg__set_parameters_result__idl__
+#define __rcl_interfaces__msg__set_parameters_result__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+
+struct SetParametersResult_ {
+boolean successful_;
+string reason_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__set_parameters_result__idl__

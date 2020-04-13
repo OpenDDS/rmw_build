@@ -1,0 +1,48 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/ParameterValue.idl
+// generated code does not contain a copyright notice
+
+#ifndef __rcl_interfaces__msg__parameter_value__idl__
+#define __rcl_interfaces__msg__parameter_value__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+typedef sequence<octet> OctetSeq_1;
+typedef sequence<boolean> BooleanSeq_1;
+typedef sequence<long long> LongLongSeq_1;
+typedef sequence<double> DoubleSeq_1;
+typedef sequence<string> StringSeq_1;
+
+struct ParameterValue_ {
+octet type_;
+boolean bool_value_;
+long long integer_value_;
+double double_value_;
+string string_value_;
+OctetSeq_1 byte_array_value_;
+
+BooleanSeq_1 bool_array_value_;
+
+LongLongSeq_1 integer_array_value_;
+
+DoubleSeq_1 double_array_value_;
+
+StringSeq_1 string_array_value_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__parameter_value__idl__

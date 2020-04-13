@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/IntraProcessMessage.idl
+// generated code does not contain a copyright notice
+
+#ifndef __rcl_interfaces__msg__intra_process_message__idl__
+#define __rcl_interfaces__msg__intra_process_message__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+
+struct IntraProcessMessage_ {
+unsigned long long publisher_id_;
+unsigned long long message_sequence_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__intra_process_message__idl__

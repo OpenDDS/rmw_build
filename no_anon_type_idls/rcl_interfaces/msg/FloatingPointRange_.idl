@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rcl_interfaces:msg/FloatingPointRange.idl
+// generated code does not contain a copyright notice
+
+#ifndef __rcl_interfaces__msg__floating_point_range__idl__
+#define __rcl_interfaces__msg__floating_point_range__idl__
+
+
+module rcl_interfaces {
+
+module msg {
+
+module dds_ {
+
+
+struct FloatingPointRange_ {
+double from_value_;
+double to_value_;
+double step_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rcl_interfaces
+
+
+#endif  // __rcl_interfaces__msg__floating_point_range__idl__
