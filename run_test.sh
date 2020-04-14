@@ -2,9 +2,9 @@
 alt_rmw="rmw_opendds_cpp"
 run_test="examples_rclcpp_minimal_publisher publisher_member_function"
 gdb_cmd="gdb -ex run --args"
-instrumented=""
+executable_suffix=""
 
-while getopts ":ha:sbi" opt; do
+while getopts ":ha:sbe:" opt; do
 case ${opt} in
     a ) 
         alt_rmw=$OPTARG
@@ -16,10 +16,10 @@ case ${opt} in
     b )
         gdb_cmd="gdb --args"
     ;;
-    i )
-        instrumented="_instrumented"
+    e )
+        executable_suffix=$OPTARG
     ;;
-    h ) echo "options: [-s] switch to subscriber [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp). [-b] breakpoint debugging [-i] run instrumented code"
+    h ) echo "options: [-s] switch to subscriber [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp). [-b] breakpoint debugging [-e] run executable suffix such as \"_instrumented\" or \"_no_param_services\""
     exit
     ;;
 esac
@@ -38,7 +38,7 @@ pushd .. &> /dev/null
 . /opt/ros/eloquent/setup.bash
 . install/local_setup.bash
 
-eval RMW_IMPLEMENTATION="$alt_rmw ros2 run --prefix '${gdb_cmd}' $run_test$instrumented"
+eval RMW_IMPLEMENTATION="$alt_rmw ros2 run --prefix '${gdb_cmd}' $run_test$executable_suffix"
 popd &> /dev/null
 popd &> /dev/null
  
