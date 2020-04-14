@@ -2,17 +2,16 @@
 script=`realpath $0`
 script_path=`dirname $script`
 
-build_std_msgs="no"
 build_cyclonedds="no"
 while getopts ":hsc" opt; do
 case ${opt} in
     s ) 
-        build_std_msgs="yes"
+        echo "deprecated. building std_msgs by default now."
     ;;  
     c ) 
         build_cyclonedds="yes"
     ;;  
-    h ) echo "options: [-s] build std_msgs [-c] build cyclone"
+    h ) echo "options: [-c] build cyclone"
     exit
     ;;
 esac
@@ -26,14 +25,9 @@ if [ $build_cyclonedds == "yes" ];then
     echo "BUILD CYCLONE"
     ./build_cyclone.sh
 fi
-if [ $build_std_msgs == "yes" ];then
-    rm ../src/common_interfaces/std_msgs/*_IGNORE
-    echo "BUILD STD MSGS"
-    ./build_std_msgs.sh
-else
-    touch ../src/common_interfaces/std_msgs/AMENT_IGNORE
-    touch ../src/common_interfaces/std_msgs/COLCON_IGNORE
-fi
+rm ../src/common_interfaces/std_msgs/*_IGNORE
+echo "BUILD STD MSGS"
+./build_std_msgs.sh
 echo "BUILD EXAMPLES"
 ./build_examples.sh 
 popd  &> /dev/null
