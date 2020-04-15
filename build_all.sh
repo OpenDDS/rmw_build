@@ -25,9 +25,9 @@ if [ $build_cyclonedds == "yes" ];then
     echo "BUILD CYCLONE"
     ./build_cyclone.sh
 fi
-rm ../src/common_interfaces/std_msgs/*_IGNORE
-echo "BUILD STD MSGS"
-./build_std_msgs.sh
+# rm ../src/common_interfaces/std_msgs/*_IGNORE
+# echo "BUILD STD MSGS"
+# ./build_std_msgs.sh
 echo "BUILD EXAMPLES"
 ./build_examples.sh 
 popd  &> /dev/null
