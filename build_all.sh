@@ -17,6 +17,13 @@ case ${opt} in
 esac
 done
 
+dpkg -l ccache &>/dev/null
+if [ $? == 1 ];then
+    apt update
+    apt install -y ccache
+fi
+export PATH=/usr/lib/ccache:$PATH
+
 pushd $script_path  &> /dev/null
 . /opt/ros/eloquent/setup.bash
 echo "BUILD OPENDDS RMW"
