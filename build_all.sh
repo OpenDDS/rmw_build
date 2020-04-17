@@ -20,14 +20,22 @@ if [ $? == 1 ];then
     apt install -y ccache
 fi
 export PATH=/usr/lib/ccache:$PATH
+. /opt/ros/eloquent/setup.bash
 
 pushd $script_path  &> /dev/null
-echo "BUILD OPENDDS RMW"
-./build_rmw.sh 
 if [ $build_cyclonedds == "yes" ];then
     echo "BUILD CYCLONE"
     ./build_cyclone.sh
+    . ../install/local_setup.bash
 fi
-echo "BUILD EXAMPLES"
-./build_examples.sh 
-popd  &> /dev/null
+
+pushd .. &> /dev/null
+echo "BUILD ALL"
+colcon build $alt_install_base --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to \
+    rmw_opendds_cpp \
+    rcl_interfaces \
+    examples_rclcpp_minimal_publisher \
+    examples_rclcpp_minimal_subscriber
+
+popd &> /dev/null
+popd &> /dev/null
