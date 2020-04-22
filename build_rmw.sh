@@ -2,7 +2,7 @@
 script=`realpath $0`
 script_path=`dirname $script`
 
-alt_install_base="--symlink-install"
+alt_install_base=""
 while getopts ":i:" opt; do
 case ${opt} in 
     i )
@@ -17,6 +17,6 @@ done
 pushd $script_path &> /dev/null
 pushd .. &> /dev/null
 . /opt/ros/eloquent/setup.bash
-colcon build $alt_install_base --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rmw_opendds_cpp rcl_interfaces 
+colcon build $alt_install_base --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rmw_opendds_cpp 
 popd &> /dev/null
 popd &> /dev/null
