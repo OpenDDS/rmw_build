@@ -34,7 +34,7 @@ done
 pushd $script_path &> /dev/null
 pushd .. &> /dev/null
 
-findgit=$(find . -name ".git")
+findgit=$(find . -name ".git"|sort)
 for x in $findgit; do
     pushd $(dirname $x) &>/dev/null
     echo -e "${TXTGRN}$(basename $(dirname $x))${TXTRST}"
