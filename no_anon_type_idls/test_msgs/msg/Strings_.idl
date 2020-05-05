@@ -12,8 +12,12 @@ module msg {
 
 module dds_ {
 
+typedef string<12> String12;
+
+typedef string<22> String22;
+
 module Strings_Constants {
-const string<12> STRING_CONST_ = "Hello world!";
+const String12 STRING_CONST_ = "Hello world!";
 
 };
 
@@ -24,12 +28,12 @@ string string_value_default2_;
 string string_value_default3_;
 string string_value_default4_;
 string string_value_default5_;
-string<22> bounded_string_value_;
-string<22> bounded_string_value_default1_;
-string<22> bounded_string_value_default2_;
-string<22> bounded_string_value_default3_;
-string<22> bounded_string_value_default4_;
-string<22> bounded_string_value_default5_;
+String22 bounded_string_value_;
+String22 bounded_string_value_default1_;
+String22 bounded_string_value_default2_;
+String22 bounded_string_value_default3_;
+String22 bounded_string_value_default4_;
+String22 bounded_string_value_default5_;
 
 };
 

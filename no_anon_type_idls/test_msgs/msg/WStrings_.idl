@@ -12,17 +12,22 @@ module msg {
 
 module dds_ {
 
+typedef wstring WstringArray[3];
+
+typedef sequence<wstring, 3> WstringSeq3;
+
+typedef sequence<wstring> WstringSeq;
 
 struct WStrings_ {
 wstring wstring_value_;
 wstring wstring_value_default1_;
 wstring wstring_value_default2_;
 wstring wstring_value_default3_;
-wstring array_of_wstrings_[3];
+WstringArray array_of_wstrings_;
 
-sequence<wstring, 3> bounded_sequence_of_wstrings_;
+WstringSeq3 bounded_sequence_of_wstrings_;
 
-sequence<wstring> unbounded_sequence_of_wstrings_;
+WstringSeq unbounded_sequence_of_wstrings_;
 
 
 };
