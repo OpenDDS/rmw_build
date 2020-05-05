@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/Builtins.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_opendds/Duration_.idl"
+#include "builtin_interfaces/msg/dds_opendds/Time_.idl"
+
+#ifndef __test_msgs__msg__builtins__idl__
+#define __test_msgs__msg__builtins__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Builtins_ {
+builtin_interfaces::msg::dds_::Duration_ duration_value_;
+builtin_interfaces::msg::dds_::Time_ time_value_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__builtins__idl__

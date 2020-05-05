@@ -1,0 +1,94 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/UnboundedSequences.idl
+// generated code does not contain a copyright notice
+#include "test_msgs/msg/dds_opendds/BasicTypes_.idl"
+#include "test_msgs/msg/dds_opendds/Constants_.idl"
+#include "test_msgs/msg/dds_opendds/Defaults_.idl"
+
+#ifndef __test_msgs__msg__unbounded_sequences__idl__
+#define __test_msgs__msg__unbounded_sequences__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct UnboundedSequences_ {
+sequence<boolean> bool_values_;
+
+sequence<octet> byte_values_;
+
+sequence<octet> char_values_;
+
+sequence<float> float32_values_;
+
+sequence<double> float64_values_;
+
+sequence<octet> int8_values_;
+
+sequence<octet> uint8_values_;
+
+sequence<short> int16_values_;
+
+sequence<unsigned short> uint16_values_;
+
+sequence<long> int32_values_;
+
+sequence<unsigned long> uint32_values_;
+
+sequence<long long> int64_values_;
+
+sequence<unsigned long long> uint64_values_;
+
+sequence<string> string_values_;
+
+sequence<test_msgs::msg::dds_::BasicTypes_> basic_types_values_;
+
+sequence<test_msgs::msg::dds_::Constants_> constants_values_;
+
+sequence<test_msgs::msg::dds_::Defaults_> defaults_values_;
+
+sequence<boolean> bool_values_default_;
+
+sequence<octet> byte_values_default_;
+
+sequence<octet> char_values_default_;
+
+sequence<float> float32_values_default_;
+
+sequence<double> float64_values_default_;
+
+sequence<octet> int8_values_default_;
+
+sequence<octet> uint8_values_default_;
+
+sequence<short> int16_values_default_;
+
+sequence<unsigned short> uint16_values_default_;
+
+sequence<long> int32_values_default_;
+
+sequence<unsigned long> uint32_values_default_;
+
+sequence<long long> int64_values_default_;
+
+sequence<unsigned long long> uint64_values_default_;
+
+sequence<string> string_values_default_;
+
+long alignment_check_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__unbounded_sequences__idl__

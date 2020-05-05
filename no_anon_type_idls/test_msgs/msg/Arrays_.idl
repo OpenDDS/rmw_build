@@ -1,0 +1,122 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/Arrays.idl
+// generated code does not contain a copyright notice
+#include "test_msgs/msg/dds_opendds/BasicTypes_.idl"
+#include "test_msgs/msg/dds_opendds/Constants_.idl"
+#include "test_msgs/msg/dds_opendds/Defaults_.idl"
+
+#ifndef __test_msgs__msg__arrays__idl__
+#define __test_msgs__msg__arrays__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+typedef boolean BoolArray[3];
+
+typedef octet OctetArray[3];
+
+typedef float FloatArray[3];
+
+typedef double DoubleArray[3];
+
+typedef short ShortArray[3];
+
+typedef unsigned short UShortArray[3];
+
+typedef long LongArray[3];
+
+typedef unsigned long ULongArray[3];
+
+typedef long long LongLongArray[3];
+
+typedef unsigned long long ULongLongArray[3];
+
+typedef string StringArray[3];
+
+typedef test_msgs::msg::dds_::BasicTypes_ BasicTypesArray[3];
+
+typedef test_msgs::msg::dds_::Constants_ ConstantsArray[3];
+
+typedef test_msgs::msg::dds_::Defaults_ DefaultsArray[3];
+
+
+struct Arrays_ {
+BoolArray bool_values_;
+
+OctetArray byte_values_;
+
+OctetArray char_values_;
+
+FloatArray float32_values_;
+
+DoubleArray float64_values_;
+
+OctetArray int8_values_;
+
+OctetArray uint8_values_;
+
+ShortArray int16_values_;
+
+UShortArray uint16_values_;
+
+LongArray int32_values_;
+
+ULongArray uint32_values_;
+
+LongLongArray int64_values_;
+
+ULongLongArray uint64_values_;
+
+StringArray string_values_;
+
+BasicTypesArray basic_types_values_;
+
+ConstantsArray constants_values_;
+
+DefaultsArray defaults_values_;
+
+BoolArray bool_values_default_;
+
+OctetArray byte_values_default_;
+
+OctetArray char_values_default_;
+
+FloatArray float32_values_default_;
+
+DoubleArray float64_values_default_;
+
+OctetArray int8_values_default_;
+
+OctetArray uint8_values_default_;
+
+ShortArray int16_values_default_;
+
+UShortArray uint16_values_default_;
+
+LongArray int32_values_default_;
+
+ULongArray uint32_values_default_;
+
+LongLongArray int64_values_default_;
+
+ULongLongArray uint64_values_default_;
+
+StringArray string_values_default_;
+
+long alignment_check_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__arrays__idl__

@@ -1,0 +1,44 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/Strings.idl
+// generated code does not contain a copyright notice
+
+#ifndef __test_msgs__msg__strings__idl__
+#define __test_msgs__msg__strings__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+module Strings_Constants {
+const string<12> STRING_CONST_ = "Hello world!";
+
+};
+
+struct Strings_ {
+string string_value_;
+string string_value_default1_;
+string string_value_default2_;
+string string_value_default3_;
+string string_value_default4_;
+string string_value_default5_;
+string<22> bounded_string_value_;
+string<22> bounded_string_value_default1_;
+string<22> bounded_string_value_default2_;
+string<22> bounded_string_value_default3_;
+string<22> bounded_string_value_default4_;
+string<22> bounded_string_value_default5_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__strings__idl__

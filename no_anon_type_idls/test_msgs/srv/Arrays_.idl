@@ -1,0 +1,174 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:srv/Arrays.idl
+// generated code does not contain a copyright notice
+#include "test_msgs/msg/dds_opendds/BasicTypes_.idl"
+#include "test_msgs/msg/dds_opendds/Constants_.idl"
+#include "test_msgs/msg/dds_opendds/Defaults_.idl"
+
+#ifndef __test_msgs__srv__arrays__idl__
+#define __test_msgs__srv__arrays__idl__
+
+
+module test_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct Arrays_Request_ {
+boolean bool_values_[3];
+
+octet byte_values_[3];
+
+octet char_values_[3];
+
+float float32_values_[3];
+
+double float64_values_[3];
+
+octet int8_values_[3];
+
+octet uint8_values_[3];
+
+short int16_values_[3];
+
+unsigned short uint16_values_[3];
+
+long int32_values_[3];
+
+unsigned long uint32_values_[3];
+
+long long int64_values_[3];
+
+unsigned long long uint64_values_[3];
+
+string string_values_[3];
+
+test_msgs::msg::dds_::BasicTypes_ basic_types_values_[3];
+
+test_msgs::msg::dds_::Constants_ constants_values_[3];
+
+test_msgs::msg::dds_::Defaults_ defaults_values_[3];
+
+boolean bool_values_default_[3];
+
+octet byte_values_default_[3];
+
+octet char_values_default_[3];
+
+float float32_values_default_[3];
+
+double float64_values_default_[3];
+
+octet int8_values_default_[3];
+
+octet uint8_values_default_[3];
+
+short int16_values_default_[3];
+
+unsigned short uint16_values_default_[3];
+
+long int32_values_default_[3];
+
+unsigned long uint32_values_default_[3];
+
+long long int64_values_default_[3];
+
+unsigned long long uint64_values_default_[3];
+
+string string_values_default_[3];
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module test_msgs
+
+
+module test_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct Arrays_Response_ {
+boolean bool_values_[3];
+
+octet byte_values_[3];
+
+octet char_values_[3];
+
+float float32_values_[3];
+
+double float64_values_[3];
+
+octet int8_values_[3];
+
+octet uint8_values_[3];
+
+short int16_values_[3];
+
+unsigned short uint16_values_[3];
+
+long int32_values_[3];
+
+unsigned long uint32_values_[3];
+
+long long int64_values_[3];
+
+unsigned long long uint64_values_[3];
+
+string string_values_[3];
+
+test_msgs::msg::dds_::BasicTypes_ basic_types_values_[3];
+
+test_msgs::msg::dds_::Constants_ constants_values_[3];
+
+test_msgs::msg::dds_::Defaults_ defaults_values_[3];
+
+boolean bool_values_default_[3];
+
+octet byte_values_default_[3];
+
+octet char_values_default_[3];
+
+float float32_values_default_[3];
+
+double float64_values_default_[3];
+
+octet int8_values_default_[3];
+
+octet uint8_values_default_[3];
+
+short int16_values_default_[3];
+
+unsigned short uint16_values_default_[3];
+
+long int32_values_default_[3];
+
+unsigned long uint32_values_default_[3];
+
+long long int64_values_default_[3];
+
+unsigned long long uint64_values_default_[3];
+
+string string_values_default_[3];
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__srv__arrays__idl__

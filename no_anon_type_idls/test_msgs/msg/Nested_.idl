@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/Nested.idl
+// generated code does not contain a copyright notice
+#include "test_msgs/msg/dds_opendds/BasicTypes_.idl"
+
+#ifndef __test_msgs__msg__nested__idl__
+#define __test_msgs__msg__nested__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Nested_ {
+test_msgs::msg::dds_::BasicTypes_ basic_types_value_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__nested__idl__

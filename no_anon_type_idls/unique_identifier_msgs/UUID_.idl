@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from unique_identifier_msgs:msg/UUID.idl
+// generated code does not contain a copyright notice
+
+#ifndef __unique_identifier_msgs__msg__uuid__idl__
+#define __unique_identifier_msgs__msg__uuid__idl__
+
+
+module unique_identifier_msgs {
+
+module msg {
+
+module dds_ {
+
+typedef octet uuid_type[16];
+
+struct UUID_ {
+uuid_type uuid_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module unique_identifier_msgs
+
+
+#endif  // __unique_identifier_msgs__msg__uuid__idl__

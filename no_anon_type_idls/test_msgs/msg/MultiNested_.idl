@@ -1,0 +1,49 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/MultiNested.idl
+// generated code does not contain a copyright notice
+#include "test_msgs/msg/dds_opendds/Arrays_.idl"
+#include "test_msgs/msg/dds_opendds/BoundedSequences_.idl"
+#include "test_msgs/msg/dds_opendds/UnboundedSequences_.idl"
+
+#ifndef __test_msgs__msg__multi_nested__idl__
+#define __test_msgs__msg__multi_nested__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct MultiNested_ {
+test_msgs::msg::dds_::Arrays_ array_of_arrays_[3];
+
+test_msgs::msg::dds_::BoundedSequences_ array_of_bounded_sequences_[3];
+
+test_msgs::msg::dds_::UnboundedSequences_ array_of_unbounded_sequences_[3];
+
+sequence<test_msgs::msg::dds_::Arrays_, 3> bounded_sequence_of_arrays_;
+
+sequence<test_msgs::msg::dds_::BoundedSequences_, 3> bounded_sequence_of_bounded_sequences_;
+
+sequence<test_msgs::msg::dds_::UnboundedSequences_, 3> bounded_sequence_of_unbounded_sequences_;
+
+sequence<test_msgs::msg::dds_::Arrays_> unbounded_sequence_of_arrays_;
+
+sequence<test_msgs::msg::dds_::BoundedSequences_> unbounded_sequence_of_bounded_sequences_;
+
+sequence<test_msgs::msg::dds_::UnboundedSequences_> unbounded_sequence_of_unbounded_sequences_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__multi_nested__idl__

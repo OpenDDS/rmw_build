@@ -1,0 +1,29 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/Empty.idl
+// generated code does not contain a copyright notice
+
+#ifndef __test_msgs__msg__empty__idl__
+#define __test_msgs__msg__empty__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Empty_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__empty__idl__

@@ -1,0 +1,38 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from test_msgs:msg/WStrings.idl
+// generated code does not contain a copyright notice
+
+#ifndef __test_msgs__msg__w_strings__idl__
+#define __test_msgs__msg__w_strings__idl__
+
+
+module test_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct WStrings_ {
+wstring wstring_value_;
+wstring wstring_value_default1_;
+wstring wstring_value_default2_;
+wstring wstring_value_default3_;
+wstring array_of_wstrings_[3];
+
+sequence<wstring, 3> bounded_sequence_of_wstrings_;
+
+sequence<wstring> unbounded_sequence_of_wstrings_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module test_msgs
+
+
+#endif  // __test_msgs__msg__w_strings__idl__
