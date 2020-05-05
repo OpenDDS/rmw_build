@@ -23,5 +23,7 @@ jobs:
         ./create_workspace.sh        
     displayName: repos setup
   - script: |
+        source /opt/OpenDDS/setenv.sh
+        source /opt/ros/eloquent/setup.bash
         ./build_all.sh        
     displayName:  environment setup and build
