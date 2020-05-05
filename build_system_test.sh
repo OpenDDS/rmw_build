@@ -18,12 +18,6 @@ case ${opt} in
 esac
 done
 
-dpkg -l ros-eloquent-test-msgs ros-eloquent-osrf-testing-tools-cpp ros-eloquent-launch-testing-ament-cmake &>/dev/null
-if [ $? == 1 ];then
-    apt update
-    apt install -y ros-eloquent-test-msgs ros-eloquent-osrf-testing-tools-cpp ros-eloquent-launch-testing-ament-cmake
-fi
-
 pushd $script_path &> /dev/null
 pushd .. &> /dev/null
 
