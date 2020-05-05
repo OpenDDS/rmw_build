@@ -20,8 +20,7 @@ jobs:
         ls
     displayName: filesystem check
   - script: |
-        mkdir src
-        vcs import src < ros2.repos        
+        ./create_workspace.sh        
     displayName: repos setup
   - script: |
         ./build_all.sh        
