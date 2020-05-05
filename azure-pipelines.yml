@@ -24,8 +24,5 @@ jobs:
         vcs import src < ros2.repos        
     displayName: repos setup
   - script: |
-        pwd
-        ls
-        ls rmw_build
-        ./rmw_build/build_all.sh        
+        ./build_all.sh        
     displayName:  environment setup and build
