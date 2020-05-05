@@ -25,12 +25,6 @@ case ${opt} in
     ;;
 esac
 done
- 
-which gdb &> /dev/null
-if [ $? == 1 ];then
-    apt update
-    apt install -y gdb
-fi
 
 script=`realpath $0`
 script_path=`dirname $script`

@@ -39,7 +39,7 @@ typedef sequence<string, 3> StringSeq3;
 
 typedef sequence<test_msgs::msg::dds_::BasicTypes_, 3> BasicTypesSeq3;
 
-typedef sequence<test_msgs::msg::dds_::Contstants_, 3> ContstantsSeq3;
+typedef sequence<test_msgs::msg::dds_::Constants_, 3> ConstantsSeq3;
 
 typedef sequence<test_msgs::msg::dds_::Defaults_, 3> DefaultsSeq3;
 
@@ -74,7 +74,7 @@ StringSeq3 string_values_;
 
 BasicTypesSeq3 basic_types_values_;
 
-ContstantsSeq3 constants_values_;
+ConstantsSeq3 constants_values_;
 
 DefaultsSeq3 defaults_values_;
 

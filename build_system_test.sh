@@ -18,12 +18,6 @@ case ${opt} in
 esac
 done
 
-dpkg -l ros-eloquent-test-msgs ros-eloquent-osrf-testing-tools-cpp ros-eloquent-launch-testing-ament-cmake &>/dev/null
-if [ $? == 1 ];then
-    apt update
-    apt install -y ros-eloquent-test-msgs ros-eloquent-osrf-testing-tools-cpp ros-eloquent-launch-testing-ament-cmake
-fi
-
 pushd $script_path &> /dev/null
 pushd .. &> /dev/null
 
@@ -48,7 +42,7 @@ if [ $use != "fastrtps" ];then
     . install_test_$use/local_setup.bash
 fi
 
-colcon build --install-base install_test_$use --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to test_communication
+colcon build --install-base install_test_$use --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rcl_interfaces test_communication
 
 popd &> /dev/null
 popd &> /dev/null

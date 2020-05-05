@@ -15,69 +15,96 @@ module srv {
 
 module dds_ {
 
+typedef boolean BoolArray[3];
+
+typedef octet OctetArray[3];
+
+typedef float FloatArray[3];
+
+typedef double DoubleArray[3];
+
+typedef short ShortArray[3];
+
+typedef unsigned short UShortArray[3];
+
+typedef long LongArray[3];
+
+typedef unsigned long ULongArray[3];
+
+typedef long long LongLongArray[3];
+
+typedef unsigned long long ULongLongArray[3];
+
+typedef string StringArray[3];
+
+typedef test_msgs::msg::dds_::BasicTypes_ BasicTypesArray[3];
+
+typedef test_msgs::msg::dds_::Constants_ ConstantsArray[3];
+
+typedef test_msgs::msg::dds_::Defaults_ DefaultsArray[3];
 
 struct Arrays_Request_ {
-boolean bool_values_[3];
+BoolArray bool_values_;
 
-octet byte_values_[3];
+OctetArray byte_values_;
 
-octet char_values_[3];
+OctetArray char_values_;
 
-float float32_values_[3];
+FloatArray float32_values_;
 
-double float64_values_[3];
+DoubleArray float64_values_;
 
-octet int8_values_[3];
+OctetArray int8_values_;
 
-octet uint8_values_[3];
+OctetArray uint8_values_;
 
-short int16_values_[3];
+ShortArray int16_values_;
 
-unsigned short uint16_values_[3];
+UShortArray uint16_values_;
 
-long int32_values_[3];
+LongArray int32_values_;
 
-unsigned long uint32_values_[3];
+ULongArray uint32_values_;
 
-long long int64_values_[3];
+LongLongArray int64_values_;
 
-unsigned long long uint64_values_[3];
+ULongLongArray uint64_values_;
 
-string string_values_[3];
+StringArray string_values_;
 
-test_msgs::msg::dds_::BasicTypes_ basic_types_values_[3];
+BasicTypesArray basic_types_values_;
 
-test_msgs::msg::dds_::Constants_ constants_values_[3];
+ConstantsArray constants_values_;
 
-test_msgs::msg::dds_::Defaults_ defaults_values_[3];
+DefaultsArray defaults_values_;
 
-boolean bool_values_default_[3];
+BoolArray bool_values_default_;
 
-octet byte_values_default_[3];
+OctetArray byte_values_default_;
 
-octet char_values_default_[3];
+OctetArray char_values_default_;
 
-float float32_values_default_[3];
+FloatArray float32_values_default_;
 
-double float64_values_default_[3];
+DoubleArray float64_values_default_;
 
-octet int8_values_default_[3];
+OctetArray int8_values_default_;
 
-octet uint8_values_default_[3];
+OctetArray uint8_values_default_;
 
-short int16_values_default_[3];
+ShortArray int16_values_default_;
 
-unsigned short uint16_values_default_[3];
+UShortArray uint16_values_default_;
 
-long int32_values_default_[3];
+LongArray int32_values_default_;
 
-unsigned long uint32_values_default_[3];
+ULongArray uint32_values_default_;
 
-long long int64_values_default_[3];
+LongLongArray int64_values_default_;
 
-unsigned long long uint64_values_default_[3];
+ULongLongArray uint64_values_default_;
 
-string string_values_default_[3];
+StringArray string_values_default_;
 
 
 };
@@ -96,69 +123,68 @@ module srv {
 
 module dds_ {
 
-
 struct Arrays_Response_ {
-boolean bool_values_[3];
+BoolArray bool_values_;
 
-octet byte_values_[3];
+OctetArray byte_values_;
 
-octet char_values_[3];
+OctetArray char_values_;
 
-float float32_values_[3];
+FloatArray float32_values_;
 
-double float64_values_[3];
+DoubleArray float64_values_;
 
-octet int8_values_[3];
+OctetArray int8_values_;
 
-octet uint8_values_[3];
+OctetArray uint8_values_;
 
-short int16_values_[3];
+ShortArray int16_values_;
 
-unsigned short uint16_values_[3];
+UShortArray uint16_values_;
 
-long int32_values_[3];
+LongArray int32_values_;
 
-unsigned long uint32_values_[3];
+ULongArray uint32_values_;
 
-long long int64_values_[3];
+LongLongArray int64_values_;
 
-unsigned long long uint64_values_[3];
+ULongLongArray uint64_values_;
 
-string string_values_[3];
+string string_values_;
 
-test_msgs::msg::dds_::BasicTypes_ basic_types_values_[3];
+BasicTypesArray basic_types_values_;
 
-test_msgs::msg::dds_::Constants_ constants_values_[3];
+ConstantsArray constants_values_;
 
-test_msgs::msg::dds_::Defaults_ defaults_values_[3];
+DefaultsArray defaults_values_;
 
-boolean bool_values_default_[3];
+boolean bool_values_default_;
 
-octet byte_values_default_[3];
+OctetArray byte_values_default_;
 
-octet char_values_default_[3];
+OctetArray char_values_default_;
 
-float float32_values_default_[3];
+FloatArray float32_values_default_;
 
-double float64_values_default_[3];
+DoubleArray float64_values_default_;
 
-octet int8_values_default_[3];
+OctetArray int8_values_default_;
 
-octet uint8_values_default_[3];
+OctetArray uint8_values_default_;
 
-short int16_values_default_[3];
+ShortArray int16_values_default_;
 
-unsigned short uint16_values_default_[3];
+UShortArray uint16_values_default_;
 
-long int32_values_default_[3];
+LongArray int32_values_default_;
 
-unsigned long uint32_values_default_[3];
+ULongArray uint32_values_default_;
 
-long long int64_values_default_[3];
+LongLongArray int64_values_default_;
 
-unsigned long long uint64_values_default_[3];
+ULongLongArray uint64_values_default_;
 
-string string_values_default_[3];
+string string_values_default_;
 
 
 };

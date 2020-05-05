@@ -15,25 +15,43 @@ module msg {
 
 module dds_ {
 
+typedef test_msgs::msg::dds_::Arrays_ Arrays[3];
+
+typedef test_msgs::msg::dds_::BoundedSequences_ BoundedSequencesArray[3];
+
+typedef test_msgs::msg::dds_::UnboundedSequences_ UnBoundedSequencesArray[3];
+
+typedef sequence<test_msgs::msg::dds_::Arrays_, 3> ArraysSeq3;
+
+typedef sequence<test_msgs::msg::dds_::BoundedSequences_, 3> BoundedSeq3;
+
+typedef sequence<test_msgs::msg::dds_::UnboundedSequences_, 3> UnboundedSeq3;
+
+typedef sequence<test_msgs::msg::dds_::Arrays_> ArraysSeq;
+
+typedef sequence<test_msgs::msg::dds_::BoundedSequences_> BoundedSeq;
+
+typedef sequence<test_msgs::msg::dds_::UnboundedSequences_> UnboundedSeq;
+
 
 struct MultiNested_ {
-test_msgs::msg::dds_::Arrays_ array_of_arrays_[3];
+Arrays array_of_arrays_;
 
-test_msgs::msg::dds_::BoundedSequences_ array_of_bounded_sequences_[3];
+BoundedSequencesArray array_of_bounded_sequences_;
 
-test_msgs::msg::dds_::UnboundedSequences_ array_of_unbounded_sequences_[3];
+UnBoundedSequencesArray array_of_unbounded_sequences_;
 
-sequence<test_msgs::msg::dds_::Arrays_, 3> bounded_sequence_of_arrays_;
+ArraysSeq3 bounded_sequence_of_arrays_;
 
-sequence<test_msgs::msg::dds_::BoundedSequences_, 3> bounded_sequence_of_bounded_sequences_;
+BoundedSeq3 bounded_sequence_of_bounded_sequences_;
 
-sequence<test_msgs::msg::dds_::UnboundedSequences_, 3> bounded_sequence_of_unbounded_sequences_;
+UnboundedSeq3 bounded_sequence_of_unbounded_sequences_;
 
-sequence<test_msgs::msg::dds_::Arrays_> unbounded_sequence_of_arrays_;
+ArraysSeq unbounded_sequence_of_arrays_;
 
-sequence<test_msgs::msg::dds_::BoundedSequences_> unbounded_sequence_of_bounded_sequences_;
+BoundedSeq unbounded_sequence_of_bounded_sequences_;
 
-sequence<test_msgs::msg::dds_::UnboundedSequences_> unbounded_sequence_of_unbounded_sequences_;
+UnboundedSeq unbounded_sequence_of_unbounded_sequences_;
 
 
 };

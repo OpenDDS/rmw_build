@@ -76,9 +76,9 @@ module action {
 
 module dds_ {
 
-
+typedef sequence<long> LongSeq;
 struct Fibonacci_Result_ {
-sequence<long> sequence_;
+LongSeq sequence_;
 
 
 };
@@ -137,10 +137,8 @@ module test_msgs {
 module action {
 
 module dds_ {
-
-
 struct Fibonacci_Feedback_ {
-sequence<long> sequence_;
+LongSeq sequence_;
 
 
 };
