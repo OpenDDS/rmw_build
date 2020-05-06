@@ -1,0 +1,178 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from example_interfaces:action/Fibonacci.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_opendds/Time_.idl"
+#include "unique_identifier_msgs/msg/dds_opendds/UUID_.idl"
+
+#ifndef __example_interfaces__action__fibonacci__idl__
+#define __example_interfaces__action__fibonacci__idl__
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+
+struct Fibonacci_Goal_ {
+long order_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+
+struct Fibonacci_SendGoal_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+example_interfaces::action::dds_::Fibonacci_Goal_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+
+struct Fibonacci_SendGoal_Response_ {
+boolean accepted_;
+builtin_interfaces::msg::dds_::Time_ stamp_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+typedef sequence<long> LongSeq;
+
+struct Fibonacci_Result_ {
+LongSeq sequence_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+
+struct Fibonacci_GetResult_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+
+struct Fibonacci_GetResult_Response_ {
+octet status_;
+example_interfaces::action::dds_::Fibonacci_Result_ result_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+
+struct Fibonacci_Feedback_ {
+LongSeq sequence_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+module example_interfaces {
+
+module action {
+
+module dds_ {
+
+
+struct Fibonacci_FeedbackMessage_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+example_interfaces::action::dds_::Fibonacci_Feedback_ feedback_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module example_interfaces
+
+
+#endif  // __example_interfaces__action__fibonacci__idl__
