@@ -18,9 +18,6 @@ case ${opt} in
 esac
 done
 
-pushd $script_path &> /dev/null
-pushd .. &> /dev/null
-
 . /opt/ros/eloquent/setup.bash
 echo $use
 if [ $use == "opendds" ];then
@@ -33,8 +30,4 @@ if [ $use != "fastrtps" ];then
     . install/local_setup.bash
 fi
 
-
 colcon build --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rcl_interfaces test_communication
-
-popd &> /dev/null
-popd &> /dev/null
