@@ -150,7 +150,7 @@ LongLongArray int64_values_;
 
 ULongLongArray uint64_values_;
 
-string string_values_;
+StringArray string_values_;
 
 BasicTypesArray basic_types_values_;
 
@@ -184,7 +184,7 @@ LongLongArray int64_values_default_;
 
 ULongLongArray uint64_values_default_;
 
-string string_values_default_;
+StringArray string_values_default_;
 
 
 };
