@@ -158,7 +158,7 @@ ConstantsArray constants_values_;
 
 DefaultsArray defaults_values_;
 
-boolean bool_values_default_;
+BoolArray bool_values_default_;
 
 OctetArray byte_values_default_;
 
