@@ -145,7 +145,7 @@ Good gdb references
 y
 ```
 
-* List the code in source file `rmw_init.cpp` at function `rmw`\_init\`
+* List the code in source file `rmw_init.cpp` at function `rm_init`
 
 ```
 (gdb) list src/rmw_opendds/rmw_opendds_cpp/src/rmw_init.cpp:rmw_init
