@@ -2,27 +2,23 @@ repositories:
   common_interfaces:
     type: git
     url: https://github.com/ros2/common_interfaces.git
-    version: 0.8.1
+    version: 2.0.1
   example_interfaces:
     type: git
     url: https://github.com/ros2/example_interfaces.git
-    version: 0.7.1
+    version: 0.9.0
   examples:
     type: git
     url: https://github.com/adamsj-oci/examples.git
-    version: master
+    version: 0.9.2
   rcl_interfaces:
     type: git
     url: https://github.com/ros2/rcl_interfaces.git
-    version: 0.8.0
-  rmw_cyclonedds:
-    type: git
-    url: https://github.com/ClaytonCalabrese/rmw_cyclonedds.git
-    version: eloquent
+    version: 1.0.0
   system_tests:
     type: git
     url: https://github.com/ros2/system_tests.git
-    version: master
+    version: 0.9.0
   test_interface_files:
     type: git
     url: https://github.com/ros2/test_interface_files.git
@@ -30,4 +26,4 @@ repositories:
   unique_identifier_msgs:
     type: git
     url: https://github.com/ros2/unique_identifier_msgs.git
-    version: 2.1.0
+    version: 2.1.2
