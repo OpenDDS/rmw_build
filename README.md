@@ -19,7 +19,7 @@ docker pull objectcomputing/opendds_ros2
 ## Build
 
 1. Create a workspace directory on the host filesystem (e.g. opendds\_rmw\_ws)
-2. Clone rmw\_build repo into directory from step 4
+2. Clone `rmw_build` repo into directory from previous step
 
 ```
 git clone https://github.com/adamsj-oci/rmw_build
@@ -31,7 +31,7 @@ git clone https://github.com/adamsj-oci/rmw_build
 docker run -it -v /host/path/to/workspace_directory:/opt/workspace objectcomputing/opendds_ros2 bash
 ```
 
-4. In the docker container, make sure you’re in /opt/workspace
+4. In the docker container, make sure you’re in `/opt/workspace`
 
 ```
 cd /opt/workspace
@@ -51,14 +51,14 @@ cd /opt/workspace
 
 ## Testing
 
-The new run\_test.sh script has several new features
+The new run\_test.sh script has several features
 
 * Runs with gdb to capture call stack (i.e. bt) if the code fails
 * Can run sub or pub from the same script
 * Can run other RMW implementations such as the default FastRTPS
 This test script does not replace the [system tests](https://github.com/ros2/system_tests.git) but is more for RMW developers to test and debug in various environments.
 
-1. Get help on the run\_test.sh script.
+1. Get help on the `run_test.sh` script.
 
 ```
 ./rmw_build/run_test.sh -h
@@ -76,7 +76,7 @@ This test script does not replace the [system tests](https://github.com/ros2/sys
 ./rmw_build/run_test.sh -s
 ```
 
-Note: Add “--ros-args --disable-rosout-logs” to the end of the RMW\_IMPLEMENTATION line in run\_test.sh to disable rosout logging
+Note: Add `--ros-args --disable-rosout-logs` to the end of the `RMW_IMPLEMENTATION` line in `run_test.sh` to disable rosout logging
 
 ```
 eval RMW_IMPLEMENTATION="$alt_rmw ros2 run --prefix '${gdb_cmd}' $run_test$executable_suffix --ros-args --disable-rosout-logs"
@@ -131,7 +131,7 @@ Good gdb references
 (gdb) next
 ```
 
-4. Set breakpoint in rmw\_init from fresh run
+4. Set breakpoint in `rmw_init` function from fresh run
 
 * Run the code
 
@@ -145,13 +145,13 @@ Good gdb references
 y
 ```
 
-* List the code in source file rmw\_init.cpp at function rmw\_init
+* List the code in source file `rmw_init.cpp` at function `rmw`\_init\`
 
 ```
 (gdb) list src/rmw_opendds/rmw_opendds_cpp/src/rmw_init.cpp:rmw_init
 ```
 
-* Set breakpoint in file rmw\_init.cpp at first line of rmw\_init function
+* Set breakpoint in file `rmw_init.cpp` at first line of `rmw_init` function
 
 ```
 (gdb) b src/rmw_opendds/rmw_opendds_cpp/src/rmw_init.cpp:rmw_init
@@ -175,13 +175,13 @@ y
 (gdb) next
 ```
 
-* Backtrace (bt) Shows the call stack
+* Backtrace (`bt`) Shows the call stack
 
 ```
 (gdb) bt
 ```
 
-5. Set breakpoint in rmw\_create\_node from fresh run
+5. Set breakpoint in `rmw_create_node` from fresh run
 
 * Run the code
 
@@ -195,13 +195,13 @@ y
 y
 ```
 
-* Show first line of function rmw\_create\_node in file rmw\_node.cpp
+* Show first line of function `rmw_create_node` in file `rmw_node.cpp`
 
 ```
 (gdb) list src/rmw_opendds/rmw_opendds_cpp/src/rmw_node.cpp:rmw_create_node
 ```
 
-* Set breakpoint on first line of rmw\_create\_node in file rmw\_node.cpp
+* Set breakpoint on first line of `rmw_create_node` in file `rmw_node.cpp`
 
 ```
 (gdb) b src/rmw_opendds/rmw_opendds_cpp/src/rmw_node.cpp:rmw_create_node
@@ -215,10 +215,10 @@ y
 (gdb) next
 ```
 
-* To see the backtrace (bt) at that line of code
+* To see the backtrace (`bt`) at that line of code
 
 ```
 (gdb) bt
 ```
 
-Edit files from /host/path/to/workspace\_directory from your host OS using your favorite editor.
+Edit files from `/host/path/to/workspace_directory` from your host OS using your favorite editor.
