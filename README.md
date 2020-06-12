@@ -22,7 +22,7 @@ docker pull objectcomputing/opendds_ros2
 2. Clone `rmw_build` repo into directory from previous step
 
 ```
-git clone https://github.com/adamsj-oci/rmw_build
+git clone https://github.com/oci-labs/rmw_build
 ```
 
 3. Run docker to start build environment
