@@ -10,7 +10,7 @@ repositories:
   examples:
     type: git
     url: https://github.com/adamsj-oci/examples.git
-    version: master
+    version: 54e40db8407e3e5df9756adeddb532b07445eb4d
   rcl_interfaces:
     type: git
     url: https://github.com/ros2/rcl_interfaces.git
