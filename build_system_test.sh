@@ -6,12 +6,12 @@ use="opendds"
 
 while getopts ":hcf" opt; do
 case ${opt} in
-    c ) 
+    c )
         use="cyclone"
-    ;;  
-    f ) 
+    ;;
+    f )
         use="fastrtps"
-    ;;  
+    ;;
     h ) echo "options: [-c] use cyclone dds [-f] use fastrtps"
     exit
     ;;
@@ -30,4 +30,4 @@ if [ $use != "fastrtps" ];then
     . install/local_setup.bash
 fi
 
-colcon build --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rcl_interfaces test_communication
+colcon build --symlink-install --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rcl_interfaces test_communication
