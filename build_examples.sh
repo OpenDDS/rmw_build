@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
-script=`realpath $0`
-script_path=`dirname $script`
-pushd $script_path &> /dev/null
-pushd .. &> /dev/null
+
 . /opt/ros/foxy/setup.bash
 . install/local_setup.bash
-colcon build --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to examples_rclcpp_minimal_publisher
-. install/local_setup.bash
-colcon build --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to examples_rclcpp_minimal_subscriber
-popd &> /dev/null
-popd &> /dev/null
+
+colcon build --symlink-install --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to examples_rclcpp_minimal_publisher examples_rclcpp_minimal_subscriber examples_rclcpp_minimal_service examples_rclcpp_minimal_client
+
