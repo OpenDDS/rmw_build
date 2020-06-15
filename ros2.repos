@@ -10,7 +10,7 @@ repositories:
   examples:
     type: git
     url: https://github.com/adamsj-oci/examples.git
-    version: 0.9.2
+    version: rmw_opendds_tests
   rcl_interfaces:
     type: git
     url: https://github.com/ros2/rcl_interfaces.git
