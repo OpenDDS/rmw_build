@@ -7,13 +7,13 @@ gdb_cmd="gdb -ex run --args"
 # while getopts ":ha:sbi" opt; do
 while getopts ":ha:b" opt; do
 case ${opt} in
-    a ) 
+    a )
         alt_rmw=$OPTARG
         echo "NOTE: For optional DDS implementations, only rmw_fastrtps_cpp is installed by default. All others require extra installation steps. https://index.ros.org/doc/ros2/Installation/DDS-Implementations/."
-    ;;  
-    # s ) 
+    ;;
+    # s )
     #     run_test="examples_rclcpp_minimal_subscriber subscriber_member_function"
-    # ;;    
+    # ;;
     b )
         gdb_cmd="gdb --args"
     ;;
@@ -30,14 +30,13 @@ script=`realpath $0`
 script_path=`dirname $script`
 pushd $script_path &> /dev/null
 pushd .. &> /dev/null
-. /opt/ros/eloquent/setup.bash
+. /opt/ros/foxy/setup.bash
 . install/local_setup.bash
 
 # eval RMW_IMPLEMENTATION="$alt_rmw ros2 run --prefix '${gdb_cmd}' $run_test$instrumented"
 RMW_IMPLEMENTATION=$alt_rmw
 colcon test --packages-up-to test_communication
-colcon test-result --all 
+colcon test-result --all
 
 popd &> /dev/null
 popd &> /dev/null
- 

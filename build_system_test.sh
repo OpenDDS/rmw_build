@@ -6,19 +6,19 @@ use="opendds"
 
 while getopts ":hcf" opt; do
 case ${opt} in
-    c ) 
+    c )
         use="cyclone"
-    ;;  
-    f ) 
+    ;;
+    f )
         use="fastrtps"
-    ;;  
+    ;;
     h ) echo "options: [-c] use cyclone dds [-f] use fastrtps"
     exit
     ;;
 esac
 done
 
-. /opt/ros/eloquent/setup.bash
+. /opt/ros/foxy/setup.bash
 echo $use
 if [ $use == "opendds" ];then
     ./rmw_build/build_rmw.sh
