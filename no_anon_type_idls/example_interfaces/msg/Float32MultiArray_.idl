@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from example_interfaces:msg/Float32MultiArray.idl
+// generated code does not contain a copyright notice
+#include "example_interfaces/msg/dds_opendds/MultiArrayLayout_.idl"
+
+#ifndef __example_interfaces__msg__float32_multi_array__idl__
+#define __example_interfaces__msg__float32_multi_array__idl__
+
+
+module example_interfaces {
+
+module msg {
+
+module dds_ {
+
+typedef sequence<float> SequenceFloat;
+
+struct Float32MultiArray_ {
+example_interfaces::msg::dds_::MultiArrayLayout_ layout_;
+SequenceFloat data_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module example_interfaces
+
+
+#endif  // __example_interfaces__msg__float32_multi_array__idl__
