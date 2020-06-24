@@ -30,4 +30,4 @@ if [ $use != "fastrtps" ];then
     . install/local_setup.bash
 fi
 
-colcon build --symlink-install --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rcl_interfaces test_communication
+colcon build --symlink-install --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rcl_interfaces test_communication test_quality_of_service test_rclcpp test_security
