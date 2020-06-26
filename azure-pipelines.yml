@@ -11,7 +11,7 @@ jobs:
   timeoutInMinutes: 90
   pool:
     vmImage: 'ubuntu-18.04'
-  container: objectcomputing/opendds_ros2:latest
+  container: objectcomputing/opendds_ros2_foxy:latest
   steps:
   - script: |
       printenv

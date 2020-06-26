@@ -13,7 +13,7 @@ It is possible to create development environments using tooling commonly availab
 3. Pull the docker build environment. Contains the latest OpenDDS (master) and currently ROS2 foxy release.
 
 ```
-docker pull objectcomputing/opendds_ros2
+docker pull objectcomputing/opendds_ros2_foxy
 ```
 
 ## Build
@@ -28,7 +28,7 @@ git clone https://github.com/oci-labs/rmw_build
 3. Run docker to start build environment
 
 ```
-docker run -it -v /host/path/to/workspace_directory:/opt/workspace objectcomputing/opendds_ros2 bash
+docker run -it -v /host/path/to/workspace_directory:/opt/workspace objectcomputing/opendds_ros2_foxy bash
 ```
 
 4. In the docker container, make sure you’re in `/opt/workspace`
