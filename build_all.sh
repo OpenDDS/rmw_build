@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH=/usr/lib/ccache:$PATH
-. /opt/ros/eloquent/setup.bash
+. /opt/ros/foxy/setup.bash
 
 echo "BUILD ALL"
 ./rmw_build/build_rmw.sh

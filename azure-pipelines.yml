@@ -11,7 +11,7 @@ jobs:
   timeoutInMinutes: 90
   pool:
     vmImage: 'ubuntu-18.04'
-  container: objectcomputing/opendds_ros2:latest
+  container: objectcomputing/opendds_ros2_foxy:latest
   steps:
   - script: |
       printenv
@@ -20,10 +20,10 @@ jobs:
         ls
     displayName: filesystem check
   - script: |
-        ./create_workspace.sh        
+        ./create_workspace.sh
     displayName: repos setup
   - script: |
         source /opt/OpenDDS/setenv.sh
-        source /opt/ros/eloquent/setup.bash
-        ./build_all.sh        
+        source /opt/ros/foxy/setup.bash
+        ./build_all.sh
     displayName:  environment setup and build

@@ -4,28 +4,35 @@ TXTRST=$(tput sgr0) # Text reset.
 
 script_path=`dirname $0`
 
-command=""
+gitcommand=""
 pipe=""
-while getopts ":spbSHh" opt; do
-case ${opt} in 
+while getopts ":spbBSH" opt; do
+case ${opt} in
     s )
-        command="status -s"
+        gitcommand="status -s"
     ;;
     p )
-        command="remote -v"
+        gitcommand="remote -v"
     ;;
     b )
-        command="branch -a"
+        gitcommand="branch -a"
+    ;;
+    B )
+        gitcommand="branch -a"
+        pipe="|grep \*"
     ;;
     S )
-        command="show -s"
+        gitcommand="show -s"
     ;;
     H )
-        command="show -s"
+        gitcommand="show -s"
         pipe="|grep -B 1 commit"
     ;;
-    h )
-        echo "options: [-s] (status) [-p] (paths) [-b] (branches) [-S] (show) [-H] (show hashes)"
+    r )
+        gitcommand="log --reverse --oneline"
+    ;;
+    ? )
+        echo "options: [-s] (status) [-p] (paths) [-b] (branches) [-B] (current branch) [-S] (show) [-H] (show hashes) [-r] (log reverse)"
         exit
     ;;
 esac
@@ -38,7 +45,7 @@ findgit=$(find . -name ".git"|sort)
 for x in $findgit; do
     pushd $(dirname $x) &>/dev/null
     echo -e "${TXTGRN}$(basename $(dirname $x))${TXTRST}"
-    eval git $command$pipe
+    eval git $gitcommand$pipe
     popd &>/dev/null
 done
 
