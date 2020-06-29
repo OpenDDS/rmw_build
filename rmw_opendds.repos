@@ -2,8 +2,8 @@ repositories:
   rmw_opendds:
     type: git
     url: https://github.com/oci-labs/rmw_opendds.git
-    version: foxy
+    version: master
   rosidl_typesupport_opendds:
     type: git
     url: https://github.com/oci-labs/rosidl_typesupport_opendds.git
-    version: foxy
+    version: master
