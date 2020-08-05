@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 alt_rmw="rmw_opendds_cpp"
 run_test="examples_rclcpp_minimal_publisher publisher_member_function"
-gdb_cmd="gdb -ex run --args"
+gdb_cmd="--prefix 'gdb -ex run --args'"
 executable_suffix=""
 
-while getopts ":ha:sbe:cS" opt; do
+while getopts ":ha:snbe:cS" opt; do
 case ${opt} in
     a )
         alt_rmw=$OPTARG
@@ -13,8 +13,11 @@ case ${opt} in
     s )
         run_test="examples_rclcpp_minimal_subscriber subscriber_member_function"
     ;;
+    n )
+        gdb_cmd=""
+    ;;
     b )
-        gdb_cmd="gdb --args"
+        gdb_cmd="--prefix 'gdb --args'"
     ;;
     e )
         executable_suffix=$OPTARG
@@ -25,7 +28,7 @@ case ${opt} in
     S )
         run_test="examples_rclcpp_minimal_service service_main"
     ;;
-    h ) echo "options: [-s] switch to subscriber [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp). [-b] breakpoint debugging [-e] run executable suffix such as \"_instrumented\" or \"_no_param_services\" [-c] run client [-S] run server"
+    h ) echo "options: [-s] switch to subscriber [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp). [-n] run without debugging [-b] breakpoint debugging [-e] run executable suffix such as \"_instrumented\" or \"_no_param_services\" [-c] run client [-S] run server"
         exit
     ;;
 esac
@@ -38,6 +41,6 @@ pushd .. &> /dev/null
 . /opt/ros/foxy/setup.bash
 . install/local_setup.bash
 
-eval RMW_IMPLEMENTATION="$alt_rmw ros2 run --prefix '${gdb_cmd}' $run_test$executable_suffix"
+eval RMW_IMPLEMENTATION="$alt_rmw ros2 run ${gdb_cmd} $run_test$executable_suffix"
 popd &> /dev/null
 popd &> /dev/null
