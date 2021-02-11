@@ -4,7 +4,7 @@ run_test="examples_rclcpp_minimal_publisher publisher_member_function"
 gdb_cmd="--prefix 'gdb -ex run --args'"
 executable_suffix=""
 
-while getopts ":ha:snbe:cS" opt; do
+while getopts ":ha:sbe:cSn" opt; do
 case ${opt} in
     a )
         alt_rmw=$OPTARG
@@ -28,7 +28,10 @@ case ${opt} in
     S )
         run_test="examples_rclcpp_minimal_service service_main"
     ;;
-    h ) echo "options: [-s] switch to subscriber [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp). [-n] run without debugging [-b] breakpoint debugging [-e] run executable suffix such as \"_instrumented\" or \"_no_param_services\" [-c] run client [-S] run server"
+    n )
+        gdb_cmd=""
+    ;;
+    h ) printf "options:\n [-s] switch to subscriber\n [-a] use alternate rmw (i.e. rmw_cyclonedds_cpp, rmw_fastrtps_cpp, or rmw_connext_cpp).\n [-b] breakpoint debugging\n [-e] run executable suffix such as \"_instrumented\" or \"_no_param_services\"\n [-c] run client\n [-S] run server\n [-n] no debug\n"
         exit
     ;;
 esac
