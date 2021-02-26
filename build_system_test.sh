@@ -3,8 +3,8 @@ script=`realpath $0`
 script_path=`dirname $script`
 
 use="opendds"
-
-while getopts ":hcf" opt; do
+tests="test_communication"
+while getopts ":hcfa" opt; do
 case ${opt} in
     c )
         use="cyclone"
@@ -12,8 +12,11 @@ case ${opt} in
     f )
         use="fastrtps"
     ;;
-    h ) echo "options: [-c] use cyclone dds [-f] use fastrtps"
-    exit
+    a )
+        tests="rcl_interfaces test_communication test_quality_of_service test_rclcpp test_security"
+    ;;
+    h ) printf "options:\n [-c] use cyclone dds\n [-f] use fastrtps\n [-a] build all tests\n"
+        exit
     ;;
 esac
 done
@@ -30,4 +33,4 @@ if [ $use != "fastrtps" ];then
     . install/local_setup.bash
 fi
 
-colcon build --symlink-install --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to rcl_interfaces test_communication test_quality_of_service test_rclcpp test_security
+colcon build --symlink-install --cmake-args '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_BUILD_TYPE=Debug' --packages-up-to $tests
