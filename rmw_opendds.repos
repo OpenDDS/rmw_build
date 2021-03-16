@@ -1,4 +1,8 @@
 repositories:
+  opendds:
+    type: git
+    url: https://github.com/adamsj-oci/OpenDDS.git
+    version: ros_release_updates
   rmw_opendds:
     type: git
     url: https://github.com/oci-labs/rmw_opendds.git
