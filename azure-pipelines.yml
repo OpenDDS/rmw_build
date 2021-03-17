@@ -11,7 +11,7 @@ jobs:
   timeoutInMinutes: 90
   pool:
     vmImage: 'ubuntu-20.04'
-  container: ros:foxy
+  container: objectcomputing/opendds_ros2:latest
   steps:
   - checkout: self  # self represents the repo where the initial Azure Pipelines YAML file was found
     clean: true
