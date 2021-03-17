@@ -20,8 +20,10 @@ jobs:
         ls
     displayName: filesystem check
   - script: |
-        ./create_workspace.sh
+        cd $(Agent.BuildDirectory)
+        ./rmw_build/create_workspace.sh
     displayName: repos setup
   - script: |
-        ./build_all.sh
+        cd $(Agent.BuildDirectory)
+        ./rmw_build/build_all.sh
     displayName:  environment setup and build
