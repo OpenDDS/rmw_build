@@ -13,6 +13,9 @@ jobs:
     vmImage: 'ubuntu-20.04'
   container: ros:foxy
   steps:
+  - checkout: self  # self represents the repo where the initial Azure Pipelines YAML file was found
+    clean: true
+    path: ws/rmw_build
   - script: |
       printenv
         echo hello
@@ -20,10 +23,10 @@ jobs:
         ls
     displayName: filesystem check
   - script: |
-        cd $(Agent.BuildDirectory)
+        cd $(Agent.BuildDirectory)/ws
         ./rmw_build/create_workspace.sh
     displayName: repos setup
   - script: |
-        cd $(Agent.BuildDirectory)
+        cd $(Agent.BuildDirectory)/ws
         ./rmw_build/build_all.sh
     displayName:  environment setup and build
