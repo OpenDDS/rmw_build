@@ -10,5 +10,9 @@ fi
 vcs import src < $script_path/ros2.repos
 vcs import src < $script_path/rmw_opendds.repos
 
-# apt update
-# rosdep install --from-paths src --ignore-src -r -y
+if [ `whoami` == "root" ];then
+    apt update
+    rosdep install --from-paths src --ignore-src -r -y
+else
+    echo "not root. Dependencies not added. Build may not succeed."
+fi
