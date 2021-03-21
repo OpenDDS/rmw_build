@@ -7,8 +7,8 @@ if [ ! -d "src" ];then
     mkdir src
 fi
 
-vcs import src < $script_path/ros2.repos
-vcs import src < $script_path/rmw_opendds.repos
+vcs import --recursive src < $script_path/ros2.repos
+vcs import --recursive src < $script_path/rmw_opendds.repos
 
 if [ `whoami` == "root" ];then
     apt update
