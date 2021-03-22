@@ -2,7 +2,7 @@ repositories:
   opendds-ros2:
     type: git
     url: https://github.com/adamsj-oci/opendds-ros2.git
-    version: master
+    version: 0.1.2
   rmw_opendds:
     type: git
     url: https://github.com/oci-labs/rmw_opendds.git

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 . /opt/ros/foxy/setup.bash
-colcon build --packages-select opendds-ros2
+colcon build --packages-select opendds
